@@ -1,10 +1,13 @@
-def calcular(n):
-    meses=["No existe","Enero", "Febrero","Marzo","Abril","Mayo","Junio","Julio","Agosto","Septiembre","Octubre","Noviembre","Diciembre"]
-    if n<1 or n>12:
-        print(meses[0])
+n=int(input("Meses del año"))
+for x in range(n):
+    num=float(input("Introduce un número del 1 al 12:"))
+    if num>12:
+        print("Número erróneo")
     else:
-        print(meses[n])
-
-
-a=int(input("Ingresa un numero: "))
-calcular(a)
+        if num==4 or num==6 or num==9 or num==11:
+            print("Este mes tiene 30 días")
+        else:
+                  if num==1 or num==3 or num==5 or num==7 or num==8 or num==10 or num==12:
+                      print("Este mes tiene 31 días")
+        if num==2:
+            print ("Este mes tiene 28 días, 29 días en los años bisiestos")
